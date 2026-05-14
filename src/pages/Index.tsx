@@ -132,11 +132,9 @@ function Card({ theme }: { theme: Theme }) {
       <div
         style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(180deg, rgba(10,20,50,0.55) 0%, rgba(10,20,50,0.05) 35%, rgba(10,20,50,0.05) 60%, rgba(10,20,60,0.6) 100%)",
+          background: "linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.0) 45%, rgba(5,10,30,0.72) 75%, rgba(5,10,30,0.88) 100%)",
         }}
       />
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "40%", background: "linear-gradient(180deg, rgba(5,15,40,0.75) 0%, transparent 100%)", pointerEvents: "none" }} />
-      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "42%", background: "linear-gradient(0deg, rgba(5,15,40,0.82) 0%, transparent 100%)", pointerEvents: "none" }} />
 
       {hearts.map((h, i) => (
         <div key={i} style={{ position: "absolute", top: h.top, left: h.left, right: h.right, bottom: h.bottom, fontSize: h.size, opacity: h.opacity, transform: `rotate(${h.rotate}deg)`, color: theme.heartColor, pointerEvents: "none", userSelect: "none" }}>♥</div>
@@ -149,27 +147,21 @@ function Card({ theme }: { theme: Theme }) {
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 6, background: `linear-gradient(90deg, transparent 0%, ${theme.bottomBorder} 50%, transparent 100%)` }} />
       <div style={{ position: "absolute", inset: 14, border: `1px solid ${theme.border}`, borderRadius: 18, pointerEvents: "none" }} />
 
-      <div style={{ position: "relative", zIndex: 10, height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", padding: "36px 28px", textAlign: "center" }}>
-        <div>
-          <div style={{ fontFamily: "'Caveat', cursive", fontSize: 14, letterSpacing: "0.26em", color: theme.floral, textTransform: "uppercase", marginBottom: 6, opacity: 0.9 }}>
-            с любовью и радостью
-          </div>
-          <div style={{ fontSize: 26, opacity: 0.75, color: theme.floral }}>❧</div>
-        </div>
+      <div style={{ position: "relative", zIndex: 10, height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", padding: "0 28px 32px", textAlign: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12, width: "100%" }}>
 
-        <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16 }}>
-          <div style={{ fontSize: 32, color: theme.heartColor, opacity: 0.9, letterSpacing: 8 }}>♥ ♥ ♥</div>
+          <div style={{ fontSize: 24, color: theme.heartColor, opacity: 0.9, letterSpacing: 8 }}>♥ ♥ ♥</div>
 
           <div>
-            <h1 style={{ fontFamily: "'Cormorant', serif", fontSize: 28, fontWeight: 400, fontStyle: "italic", color: "#ffd060", lineHeight: 1.2, letterSpacing: "0.04em", margin: "0 0 6px 0", textShadow: "0 0 20px rgba(255,200,60,0.5), 0 2px 20px rgba(0,0,0,0.8)", WebkitTextStroke: "1px #e02020" }}>
+            <h1 style={{ fontFamily: "'Cormorant', serif", fontSize: 26, fontWeight: 400, fontStyle: "italic", color: "#ffd060", lineHeight: 1.2, letterSpacing: "0.04em", margin: "0 0 4px 0", textShadow: "0 0 20px rgba(255,200,60,0.5), 0 2px 20px rgba(0,0,0,0.8)", WebkitTextStroke: "1px #e02020" }}>
               Поздравляем с росписью,
             </h1>
-            <h1 style={{ fontFamily: "'Cormorant', serif", fontSize: 48, fontWeight: 700, color: theme.accent, lineHeight: 1.1, letterSpacing: "0.06em", margin: 0, textShadow: `0 0 30px ${theme.accentGlow}, 0 3px 24px rgba(0,0,0,0.7)`, textTransform: "uppercase" }}>
+            <h1 style={{ fontFamily: "'Cormorant', serif", fontSize: 46, fontWeight: 700, color: theme.accent, lineHeight: 1.1, letterSpacing: "0.06em", margin: 0, textShadow: `0 0 30px ${theme.accentGlow}, 0 3px 24px rgba(0,0,0,0.7)`, textTransform: "uppercase" }}>
               ЛЮБИМЫЕ!!!
             </h1>
           </div>
 
-          <div style={{ fontFamily: "'Cormorant', serif", fontSize: 34, fontWeight: 600, fontStyle: "italic", color: theme.names, textShadow: "0 2px 20px rgba(0,0,0,0.9)", lineHeight: 1.2 }}>
+          <div style={{ fontFamily: "'Cormorant', serif", fontSize: 32, fontWeight: 600, fontStyle: "italic", color: theme.names, textShadow: "0 2px 20px rgba(0,0,0,0.9)", lineHeight: 1.2 }}>
             Ольга &amp; Иван
           </div>
 
@@ -179,21 +171,20 @@ function Card({ theme }: { theme: Theme }) {
             <div style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${theme.heartColor}66, transparent)` }} />
           </div>
 
-          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 16, fontWeight: 300, fontStyle: "italic", color: theme.body, lineHeight: 1.8, margin: 0, maxWidth: 300, opacity: 0.95, textShadow: "0 1px 12px rgba(0,0,0,0.9)" }}>
+          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 15, fontWeight: 300, fontStyle: "italic", color: theme.body, lineHeight: 1.75, margin: 0, opacity: 0.95, textShadow: "0 1px 12px rgba(0,0,0,0.9)" }}>
             Пусть ваша любовь будет такой же бескрайней,<br />
-            как это море — глубокой, светлой<br />
-            и вечной.
+            как это море — глубокой, светлой и вечной.
           </p>
-        </div>
 
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
-          <div style={{ fontSize: 20, opacity: 0.7, color: theme.floral }}>❧</div>
-          <div style={{ fontFamily: "'Caveat', cursive", fontSize: 22, color: theme.date, fontWeight: 600, opacity: 0.95, letterSpacing: "0.06em", textShadow: `0 0 16px ${theme.accentGlow}` }}>
-            16.05.2026
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
+            <div style={{ fontFamily: "'Caveat', cursive", fontSize: 21, color: theme.date, fontWeight: 600, opacity: 0.95, letterSpacing: "0.06em", textShadow: `0 0 16px ${theme.accentGlow}` }}>
+              16.05.2026
+            </div>
+            <div style={{ fontFamily: "'Caveat', cursive", fontSize: 15, color: theme.tagline, opacity: 0.8, letterSpacing: "0.04em" }}>
+              всегда вместе 🌊
+            </div>
           </div>
-          <div style={{ fontFamily: "'Caveat', cursive", fontSize: 16, color: theme.tagline, opacity: 0.8, letterSpacing: "0.04em" }}>
-            всегда вместе 🌊
-          </div>
+
         </div>
       </div>
     </div>
