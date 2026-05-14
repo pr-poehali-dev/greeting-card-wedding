@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import html2canvas from "html2canvas";
 
 const SEA_BG = "https://cdn.poehali.dev/projects/409cff44-b70b-4153-8bd9-c94af97605e7/files/ad049e9b-60b6-460a-a1d9-4e66445210c7.jpg";
 
@@ -137,9 +138,10 @@ const flowers: FlowerItem[] = [
   { bottom: "5%", right: "16%", emoji: "🌷", size: 16, opacity: 0.5 },
 ];
 
-function Card({ theme }: { theme: Theme }) {
+function Card({ theme, cardRef }: { theme: Theme; cardRef?: React.RefObject<HTMLDivElement> }) {
   return (
     <div
+      ref={cardRef}
       style={{
         position: "relative",
         width: "100%",
@@ -211,6 +213,27 @@ function Card({ theme }: { theme: Theme }) {
 
 export default function Index() {
   const [active, setActive] = useState(0);
+  const [downloading, setDownloading] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const downloadPng = async () => {
+    if (!cardRef.current) return;
+    setDownloading(true);
+    try {
+      const canvas = await html2canvas(cardRef.current, {
+        useCORS: true,
+        allowTaint: true,
+        scale: 2,
+        backgroundColor: null,
+      });
+      const link = document.createElement("a");
+      link.download = `открытка-${themes[active].label.toLowerCase()}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    } finally {
+      setDownloading(false);
+    }
+  };
 
   return (
     <div
@@ -271,13 +294,39 @@ export default function Index() {
               transform: active === i ? "scale(1.03)" : "scale(0.97)",
               transition: "all 0.3s ease",
               cursor: "pointer",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
             onClick={() => setActive(i)}
           >
-            <Card theme={t} />
+            <Card theme={t} cardRef={active === i ? cardRef : undefined} />
             <div style={{ textAlign: "center", marginTop: 10, fontFamily: "'Caveat', cursive", fontSize: 18, color: t.accent, opacity: active === i ? 1 : 0.5, letterSpacing: "0.06em" }}>
               {t.label}
             </div>
+            {active === i && (
+              <button
+                onClick={(e) => { e.stopPropagation(); downloadPng(); }}
+                disabled={downloading}
+                style={{
+                  marginTop: 14,
+                  padding: "10px 28px",
+                  borderRadius: 40,
+                  border: `2px solid ${t.accent}`,
+                  background: `${t.accent}22`,
+                  color: t.accent,
+                  fontFamily: "'Caveat', cursive",
+                  fontSize: 18,
+                  cursor: downloading ? "wait" : "pointer",
+                  letterSpacing: "0.05em",
+                  boxShadow: `0 0 18px ${t.accentGlow}`,
+                  transition: "all 0.2s",
+                  opacity: downloading ? 0.6 : 1,
+                }}
+              >
+                {downloading ? "Сохраняю..." : "⬇ Скачать PNG"}
+              </button>
+            )}
           </div>
         ))}
       </div>
