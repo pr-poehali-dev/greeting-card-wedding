@@ -183,7 +183,7 @@ function Card({ theme }: { theme: Theme }) {
           <div style={{ fontSize: 24, color: theme.heartColor, opacity: 0.9, letterSpacing: 8 }}>♥ ♥ ♥</div>
 
           <div>
-            <h1 style={{ fontFamily: "'Cormorant', serif", fontSize: 26, fontWeight: 400, fontStyle: "italic", color: "#ffd060", lineHeight: 1.2, letterSpacing: "0.04em", margin: "0 0 4px 0", textShadow: "0 0 20px rgba(255,200,60,0.5), 0 2px 20px rgba(0,0,0,0.8)", WebkitTextStroke: "1px #e02020" }}>
+            <h1 style={{ fontFamily: "'Cormorant', serif", fontSize: 26, fontWeight: 400, fontStyle: "italic", color: "#1a5c2a", lineHeight: 1.2, letterSpacing: "0.04em", margin: "0 0 4px 0", textShadow: "0 2px 12px rgba(0,0,0,0.8), 0 0 20px rgba(20,100,40,0.4)" }}>
               Поздравляем с росписью,
             </h1>
             <h1 style={{ fontFamily: "'Cormorant', serif", fontSize: 46, fontWeight: 700, color: theme.accent, lineHeight: 1.1, letterSpacing: "0.06em", margin: 0, textShadow: `0 0 30px ${theme.accentGlow}, 0 3px 24px rgba(0,0,0,0.7)`, textTransform: "uppercase" }}>
