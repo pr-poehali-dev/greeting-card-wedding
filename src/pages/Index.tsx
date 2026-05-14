@@ -224,11 +224,11 @@ export default function Index() {
         useCORS: true,
         allowTaint: true,
         scale: 2,
-        backgroundColor: null,
+        backgroundColor: "#0a1628",
       });
       const link = document.createElement("a");
-      link.download = `открытка-${themes[active].label.toLowerCase()}.png`;
-      link.href = canvas.toDataURL("image/png");
+      link.download = `открытка-${themes[active].label.toLowerCase()}.jpg`;
+      link.href = canvas.toDataURL("image/jpeg", 0.95);
       link.click();
     } finally {
       setDownloading(false);
@@ -324,7 +324,7 @@ export default function Index() {
                   opacity: downloading ? 0.6 : 1,
                 }}
               >
-                {downloading ? "Сохраняю..." : "⬇ Скачать PNG"}
+                {downloading ? "Сохраняю..." : "⬇ Скачать JPEG"}
               </button>
             )}
           </div>
