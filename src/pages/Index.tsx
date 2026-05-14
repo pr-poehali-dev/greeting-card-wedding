@@ -1,4 +1,4 @@
-const SEA_BG = "https://cdn.poehali.dev/projects/409cff44-b70b-4153-8bd9-c94af97605e7/files/c928da13-4a0f-42b6-b6f1-6335c8ed0f48.jpg";
+const SEA_BG = "https://cdn.poehali.dev/projects/409cff44-b70b-4153-8bd9-c94af97605e7/files/ad049e9b-60b6-460a-a1d9-4e66445210c7.jpg";
 
 interface HeartItem {
   top?: string;
@@ -46,7 +46,7 @@ export default function Index() {
     <div
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(160deg, #c8e6f0 0%, #a8d8ea 40%, #b8dff0 70%, #d0eef8 100%)",
+        background: "linear-gradient(160deg, #0a1628 0%, #0d2040 40%, #0a1830 70%, #12203a 100%)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -62,7 +62,7 @@ export default function Index() {
           aspectRatio: "3/4",
           borderRadius: 28,
           overflow: "hidden",
-          boxShadow: "0 32px 80px rgba(60,120,180,0.32), 0 4px 24px rgba(100,160,210,0.22)",
+          boxShadow: "0 32px 80px rgba(20,60,120,0.6), 0 0 60px rgba(255,180,60,0.15), 0 4px 24px rgba(0,0,0,0.5)",
         }}
       >
         {/* Sea background */}
@@ -82,7 +82,7 @@ export default function Index() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(180deg, rgba(255,240,248,0.6) 0%, rgba(255,230,240,0.15) 35%, rgba(200,235,255,0.1) 60%, rgba(240,220,250,0.65) 100%)",
+              "linear-gradient(180deg, rgba(10,20,50,0.55) 0%, rgba(10,20,50,0.05) 35%, rgba(10,20,50,0.05) 60%, rgba(10,20,60,0.6) 100%)",
           }}
         />
 
@@ -92,7 +92,7 @@ export default function Index() {
             position: "absolute",
             top: 0, left: 0, right: 0,
             height: "40%",
-            background: "linear-gradient(180deg, rgba(255,240,250,0.82) 0%, transparent 100%)",
+            background: "linear-gradient(180deg, rgba(5,15,40,0.75) 0%, transparent 100%)",
             pointerEvents: "none",
           }}
         />
@@ -103,7 +103,7 @@ export default function Index() {
             position: "absolute",
             bottom: 0, left: 0, right: 0,
             height: "42%",
-            background: "linear-gradient(0deg, rgba(240,220,255,0.88) 0%, transparent 100%)",
+            background: "linear-gradient(0deg, rgba(5,15,40,0.82) 0%, transparent 100%)",
             pointerEvents: "none",
           }}
         />
@@ -203,7 +203,7 @@ export default function Index() {
                 fontFamily: "'Caveat', cursive",
                 fontSize: 14,
                 letterSpacing: "0.26em",
-                color: "#b05070",
+                color: "#f0c080",
                 textTransform: "uppercase",
                 marginBottom: 6,
                 opacity: 0.9,
@@ -211,14 +211,14 @@ export default function Index() {
             >
               с любовью и радостью
             </div>
-            <div style={{ fontSize: 26, opacity: 0.65, color: "#c4607a" }}>❧</div>
+            <div style={{ fontSize: 26, opacity: 0.75, color: "#f0c080" }}>❧</div>
           </div>
 
           {/* Center content */}
           <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16 }}>
 
             {/* Hearts trio */}
-            <div style={{ fontSize: 32, color: "#d4607a", opacity: 0.8, letterSpacing: 8 }}>
+            <div style={{ fontSize: 32, color: "#ffd060", opacity: 0.9, letterSpacing: 8 }}>
               ♥ ♥ ♥
             </div>
 
@@ -230,11 +230,11 @@ export default function Index() {
                   fontSize: 28,
                   fontWeight: 400,
                   fontStyle: "italic",
-                  color: "#4a2838",
+                  color: "#f0e8d0",
                   lineHeight: 1.2,
                   letterSpacing: "0.04em",
                   margin: "0 0 6px 0",
-                  textShadow: "0 2px 20px rgba(255,255,255,0.7)",
+                  textShadow: "0 2px 20px rgba(0,0,0,0.8)",
                 }}
               >
                 Поздравляем с росписью,
@@ -244,11 +244,11 @@ export default function Index() {
                   fontFamily: "'Cormorant', serif",
                   fontSize: 48,
                   fontWeight: 700,
-                  color: "#c4405a",
+                  color: "#ffd060",
                   lineHeight: 1.1,
                   letterSpacing: "0.06em",
                   margin: 0,
-                  textShadow: "0 3px 24px rgba(255,255,255,0.6), 0 1px 8px rgba(196,64,90,0.2)",
+                  textShadow: "0 0 30px rgba(255,200,60,0.6), 0 3px 24px rgba(0,0,0,0.7)",
                   textTransform: "uppercase",
                 }}
               >
@@ -263,8 +263,8 @@ export default function Index() {
                 fontSize: 34,
                 fontWeight: 600,
                 fontStyle: "italic",
-                color: "#3a2040",
-                textShadow: "0 2px 18px rgba(255,255,255,0.75)",
+                color: "#ffffff",
+                textShadow: "0 2px 20px rgba(0,0,0,0.9), 0 0 30px rgba(255,180,80,0.3)",
                 lineHeight: 1.2,
               }}
             >
@@ -280,9 +280,9 @@ export default function Index() {
                 width: "80%",
               }}
             >
-              <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(196,96,122,0.4))" }} />
-              <span style={{ color: "#d4607a", fontSize: 14, opacity: 0.7 }}>♥</span>
-              <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, rgba(196,96,122,0.4), transparent)" }} />
+              <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(255,200,60,0.4))" }} />
+              <span style={{ color: "#ffd060", fontSize: 14, opacity: 0.8 }}>♥</span>
+              <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, rgba(255,200,60,0.4), transparent)" }} />
             </div>
 
             {/* Body text */}
@@ -292,12 +292,12 @@ export default function Index() {
                 fontSize: 16,
                 fontWeight: 300,
                 fontStyle: "italic",
-                color: "#3a2530",
+                color: "#e8dfc8",
                 lineHeight: 1.8,
                 margin: 0,
                 maxWidth: 300,
-                opacity: 0.9,
-                textShadow: "0 1px 10px rgba(255,255,255,0.8)",
+                opacity: 0.95,
+                textShadow: "0 1px 12px rgba(0,0,0,0.9)",
               }}
             >
               Пусть ваша любовь будет такой же бескрайней,<br />
@@ -308,15 +308,16 @@ export default function Index() {
 
           {/* Bottom signature */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
-            <div style={{ fontSize: 20, opacity: 0.55, color: "#b05070" }}>❧</div>
+            <div style={{ fontSize: 20, opacity: 0.7, color: "#f0c060" }}>❧</div>
             <div
               style={{
                 fontFamily: "'Caveat', cursive",
                 fontSize: 22,
-                color: "#c4405a",
+                color: "#ffd060",
                 fontWeight: 600,
-                opacity: 0.9,
+                opacity: 0.95,
                 letterSpacing: "0.06em",
+                textShadow: "0 0 16px rgba(255,200,60,0.5)",
               }}
             >
               16.05.2026
@@ -325,8 +326,8 @@ export default function Index() {
               style={{
                 fontFamily: "'Caveat', cursive",
                 fontSize: 16,
-                color: "#6a3858",
-                opacity: 0.75,
+                color: "#c8dff0",
+                opacity: 0.8,
                 letterSpacing: "0.04em",
               }}
             >
