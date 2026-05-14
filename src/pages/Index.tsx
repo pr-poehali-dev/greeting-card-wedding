@@ -227,7 +227,7 @@ export default function Index() {
               <h1
                 style={{
                   fontFamily: "'Cormorant', serif",
-                  fontSize: 30,
+                  fontSize: 28,
                   fontWeight: 400,
                   fontStyle: "italic",
                   color: "#4a2838",
@@ -242,7 +242,7 @@ export default function Index() {
               <h1
                 style={{
                   fontFamily: "'Cormorant', serif",
-                  fontSize: 52,
+                  fontSize: 48,
                   fontWeight: 700,
                   color: "#c4405a",
                   lineHeight: 1.1,
@@ -252,20 +252,23 @@ export default function Index() {
                   textTransform: "uppercase",
                 }}
               >
-                ЛЮБИМЫЕ!
+                ЛЮБИМЫЕ!!!
               </h1>
-              <div
-                style={{
-                  fontFamily: "'Caveat', cursive",
-                  fontSize: 28,
-                  color: "#d4607a",
-                  opacity: 0.85,
-                  marginTop: 2,
-                  letterSpacing: "0.08em",
-                }}
-              >
-                !!!
-              </div>
+            </div>
+
+            {/* Names */}
+            <div
+              style={{
+                fontFamily: "'Cormorant', serif",
+                fontSize: 34,
+                fontWeight: 600,
+                fontStyle: "italic",
+                color: "#3a2040",
+                textShadow: "0 2px 18px rgba(255,255,255,0.75)",
+                lineHeight: 1.2,
+              }}
+            >
+              Ольга &amp; Иван
             </div>
 
             {/* Divider with hearts */}
@@ -309,9 +312,21 @@ export default function Index() {
             <div
               style={{
                 fontFamily: "'Caveat', cursive",
-                fontSize: 19,
+                fontSize: 22,
+                color: "#c4405a",
+                fontWeight: 600,
+                opacity: 0.9,
+                letterSpacing: "0.06em",
+              }}
+            >
+              16.05.2026
+            </div>
+            <div
+              style={{
+                fontFamily: "'Caveat', cursive",
+                fontSize: 16,
                 color: "#6a3858",
-                opacity: 0.85,
+                opacity: 0.75,
                 letterSpacing: "0.04em",
               }}
             >
